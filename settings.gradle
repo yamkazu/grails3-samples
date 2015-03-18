@@ -1,3 +1,4 @@
 include 'grails-sample-hibernate-sql-logging'
 include 'grails-sample-spring-security'
 include 'grails-sample-functional-test'
+include 'grails-sample-ms-app-insights'
