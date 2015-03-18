@@ -1,6 +1,5 @@
 package grails.sample
 
-import grails.sample.sample.Book
 import grails.test.mixin.integration.Integration
 import grails.transaction.Rollback
 import org.junit.Rule

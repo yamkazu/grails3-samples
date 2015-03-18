@@ -1,4 +1,4 @@
-package grails.sample.sample
+package grails.sample
 
 class Book {
     String title
