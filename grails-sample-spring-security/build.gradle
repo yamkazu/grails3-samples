@@ -54,7 +54,6 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-actuator"
     compile "org.springframework.boot:spring-boot-autoconfigure"
     compile "org.springframework.boot:spring-boot-starter-tomcat"
-    compile "org.springframework.boot:spring-boot-starter-security"
     compile "org.grails:grails-dependencies"
     compile "org.grails:grails-web-boot"
 
@@ -72,6 +71,10 @@ dependencies {
     testRuntime 'org.seleniumhq.selenium:selenium-htmlunit-driver:2.44.0'
 
     console "org.grails:grails-console"
+
+    compile "org.springframework.boot:spring-boot-starter-security"
+    compile "org.springframework.security:spring-security-taglibs"
+    runtime 'javax.servlet.jsp:javax.servlet.jsp-api:2.3.1'
 }
 
 task wrapper(type: Wrapper) {

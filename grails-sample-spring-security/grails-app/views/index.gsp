@@ -1,3 +1,4 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!doctype html>
 <html>
     <head>
@@ -119,5 +120,11 @@
                 </ul>
             </div>
         </div>
+        <sec:authorize access="hasRole('ROLE_ADMIN')">
+            <p>This content will only be visible to users who have the "ROLE_ADMIN" authority</p>
+        </sec:authorize>
+        <sec:authorize access="hasRole('ROLE_USER')">
+            <p>This content will only be visible to users who have the "ROLE_USER" authority</p>
+        </sec:authorize>
     </body>
 </html>

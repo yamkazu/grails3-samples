@@ -1,5 +1,0 @@
-class LoginController {
-
-    def index() {
-    }
-}

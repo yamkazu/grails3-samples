@@ -1,7 +1,7 @@
 package grails.sample
 
+import grails.compiler.GrailsCompileStatic
 import grails.transaction.Transactional
-import groovy.transform.CompileStatic
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.User
 import org.springframework.security.core.userdetails.UserDetails
@@ -10,13 +10,13 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException
 import org.springframework.stereotype.Service
 
 @Service
-@CompileStatic
+@GrailsCompileStatic
 class GormUserDetailsService implements UserDetailsService {
 
     @Transactional(readOnly = true)
     @Override
     UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        def person = Person.where { username == username }.get()
+        def person = Person.findByUsername(username)
         if (!person) {
             throw new UsernameNotFoundException("Username not found: ${username}")
         }

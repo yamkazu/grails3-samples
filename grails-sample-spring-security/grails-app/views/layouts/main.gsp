@@ -1,3 +1,4 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!doctype html>
 <html lang="en" class="no-js">
     <head>
@@ -11,7 +12,16 @@
         <g:layoutHead/>
     </head>
     <body>
-        <div id="grailsLogo" role="banner"><a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a></div>
+        <div id="grailsLogo" role="banner">
+            <a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a>
+            <sec:authorize access="fullyAuthenticated">
+                <form action="${createLink(uri: '/logout')}" method="post">
+                     <input type="submit" value="Logout" />
+                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                </form>
+            </sec:authorize>
+        </div>
+        </form>
         <g:layoutBody/>
         <div class="footer" role="contentinfo"></div>
         <div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
