@@ -6,7 +6,7 @@ import org.springframework.security.authentication.DisabledException
 import org.springframework.security.authentication.LockedException
 import org.springframework.security.web.WebAttributes
 
-class LoginController implements SpringSecurityTrait {
+class LoginController implements SpringSecurityContext {
 
     static defaultAction = 'auth'
 

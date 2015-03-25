@@ -8,7 +8,7 @@ import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.security.core.userdetails.User
 
 @GrailsCompileStatic
-trait SpringSecurityTrait {
+trait SpringSecurityContext {
 
     Authentication getAuthentication() {
         SecurityContextHolder.context.authentication
