@@ -1,6 +1,7 @@
-package grails.sample
+package grails.sample.spring.security
 
 import grails.compiler.GrailsCompileStatic
+import grails.sample.spring.security.Person
 import org.springframework.security.authentication.AnonymousAuthenticationToken
 import org.springframework.security.core.Authentication
 import org.springframework.security.core.GrantedAuthority

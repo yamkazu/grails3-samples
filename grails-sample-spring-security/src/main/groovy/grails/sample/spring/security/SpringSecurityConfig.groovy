@@ -1,4 +1,4 @@
-package grails.sample
+package grails.sample.spring.security
 
 import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic

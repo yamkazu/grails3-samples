@@ -1,4 +1,4 @@
-package grails.sample
+package grails.sample.spring.security
 
 import org.springframework.security.authentication.AccountExpiredException
 import org.springframework.security.authentication.CredentialsExpiredException
@@ -12,7 +12,7 @@ class LoginController implements SpringSecurityContext {
 
     def auth() {
         if (loggedIn) {
-            redirect uri: createLink(uri: '/')
+            redirect uri: '/'
             return
         }
 

@@ -1,4 +1,4 @@
-package grails.sample
+package grails.sample.functional.test
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration

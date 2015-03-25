@@ -2,7 +2,7 @@
 grails:
     profile: web
     codegen:
-        defaultPackage: grailssamplehibernatesqllogging
+        defaultPackage: grails.sample.hibernate.sql.logging
 info:
     app:
         name: '@info.app.name@'

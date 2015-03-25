@@ -1,5 +1,5 @@
-import grails.sample.Person
-import grails.sample.Role
+import grails.sample.spring.security.Person
+import grails.sample.spring.security.Role
 
 class BootStrap {
 

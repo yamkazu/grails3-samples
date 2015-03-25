@@ -1,4 +1,4 @@
-package grails.sample
+package grails.sample.spring.security
 
 import grails.util.Holders
 import org.springframework.security.crypto.password.PasswordEncoder

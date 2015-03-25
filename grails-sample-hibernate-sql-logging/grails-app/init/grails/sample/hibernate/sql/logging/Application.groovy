@@ -1,4 +1,4 @@
-package grailssamplehibernatesqllogging
+package grails.sample.hibernate.sql.logging
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration

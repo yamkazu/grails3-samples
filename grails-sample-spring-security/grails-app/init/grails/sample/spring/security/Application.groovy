@@ -1,4 +1,4 @@
-package grails.sample
+package grails.sample.spring.security
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration

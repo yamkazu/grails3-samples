@@ -1,6 +1,8 @@
-package grails.sample
+package grails.sample.spring.security
 
 import grails.compiler.GrailsCompileStatic
+import grails.sample.spring.security.Person
+import grails.sample.spring.security.Role
 import grails.transaction.Transactional
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.User

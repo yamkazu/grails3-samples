@@ -1,4 +1,4 @@
-package grails.sample
+package grails.sample.spring.security
 
 import org.springframework.security.access.annotation.Secured
 import org.springframework.security.access.prepost.PreAuthorize

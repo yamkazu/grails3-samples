@@ -1,5 +1,6 @@
-package grails.sample
+package grails.sample.hibernate.sql.logging
 
+import grails.sample.hibernate.sql.logging.Book
 import grails.test.mixin.integration.Integration
 import grails.transaction.Rollback
 import org.junit.Rule

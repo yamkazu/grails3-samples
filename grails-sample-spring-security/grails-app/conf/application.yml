@@ -2,7 +2,7 @@
 grails:
     profile: web
     codegen:
-        defaultPackage: grails.sample
+        defaultPackage: grails.sample.spring.security
 info:
     app:
         name: '@info.app.name@'

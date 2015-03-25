@@ -1,9 +1,8 @@
 package grails.sample.functional.test
 
-
+import grails.transaction.Transactional
 
 import static org.springframework.http.HttpStatus.*
-import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class BookController {
@@ -12,7 +11,7 @@ class BookController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Book.list(params), model:[bookCount: Book.count()]
+        respond Book.list(params), model: [bookCount: Book.count()]
     }
 
     def show(Book book) {
@@ -33,11 +32,11 @@ class BookController {
 
         if (book.hasErrors()) {
             transactionStatus.setRollbackOnly()
-            respond book.errors, view:'create'
+            respond book.errors, view: 'create'
             return
         }
 
-        book.save flush:true
+        book.save flush: true
 
         request.withFormat {
             form multipartForm {
@@ -62,18 +61,18 @@ class BookController {
 
         if (book.hasErrors()) {
             transactionStatus.setRollbackOnly()
-            respond book.errors, view:'edit'
+            respond book.errors, view: 'edit'
             return
         }
 
-        book.save flush:true
+        book.save flush: true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'book.label', default: 'Book'), book.id])
                 redirect book
             }
-            '*'{ respond book, [status: OK] }
+            '*' { respond book, [status: OK] }
         }
     }
 
@@ -86,14 +85,14 @@ class BookController {
             return
         }
 
-        book.delete flush:true
+        book.delete flush: true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'book.label', default: 'Book'), book.id])
-                redirect action:"index", method:"GET"
+                redirect action: "index", method: "GET"
             }
-            '*'{ render status: NO_CONTENT }
+            '*' { render status: NO_CONTENT }
         }
     }
 
@@ -103,7 +102,7 @@ class BookController {
                 flash.message = message(code: 'default.not.found.message', args: [message(code: 'book.label', default: 'Book'), params.id])
                 redirect action: "index", method: "GET"
             }
-            '*'{ render status: NOT_FOUND }
+            '*' { render status: NOT_FOUND }
         }
     }
 }
