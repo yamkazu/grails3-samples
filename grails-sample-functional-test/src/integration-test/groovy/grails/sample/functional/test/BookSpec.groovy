@@ -8,7 +8,7 @@ import grails.sample.functional.test.pages.BookShowPage
 import grails.test.mixin.integration.Integration
 
 @Integration
-class BookSpecSpec extends GebReportingSpec {
+class BookSpec extends GebReportingSpec {
 
     def cleanup() {
         Book.withTransaction {
