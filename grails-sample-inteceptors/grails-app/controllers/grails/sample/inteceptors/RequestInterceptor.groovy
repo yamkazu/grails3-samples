@@ -23,7 +23,7 @@ class RequestInterceptor {
         }
         println "  params:"
         params.keySet().each { Object key ->
-            println "     - ${key}: ${params.get(key)}"
+            println "    - ${key}: ${params.get(key)}"
         }
 
         true
