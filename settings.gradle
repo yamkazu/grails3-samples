@@ -1,3 +1,4 @@
+include 'grails-sample-actuator'
 include 'grails-sample-events'
 include 'grails-sample-functional-test'
 include 'grails-sample-hibernate-sql-logging'
