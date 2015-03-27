@@ -1,12 +1,13 @@
 package grails.sample.plugin.spring.security
 
-import grails.util.Holders
 import org.springframework.security.crypto.password.PasswordEncoder
 
 class Person {
 
     String username
     String password
+
+    PasswordEncoder passwordEncoder
 
     static constraints = {
         username blank: false, unique: true
@@ -19,6 +20,8 @@ class Person {
 
     static hasMany = [roles: Role]
 
+    static transients = ['passwordEncoder']
+
     def beforeInsert() {
         encodePassword()
     }
@@ -30,6 +33,6 @@ class Person {
     }
 
     protected void encodePassword() {
-        password = Holders.grailsApplication.mainContext.getBean(PasswordEncoder).encode(password)
+        password = passwordEncoder.encode(password)
     }
 }
