@@ -1,5 +1,7 @@
 language: groovy
 jdk:
   - oraclejdk8
+install:
+  - true
 script:
-  - TERM=dumb ./gradlew clean test integrationTest
+  - TERM=dumb ./gradlew test integrationTest
