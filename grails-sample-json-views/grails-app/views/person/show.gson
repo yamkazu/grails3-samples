@@ -1,0 +1,9 @@
+import grails.sample.json.views.Person
+
+model {
+    Person person
+}
+
+json tmpl.book(person)
+json g.render(template: 'person', model: [person: person])
+

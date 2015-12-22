@@ -1,0 +1,7 @@
+model {
+    String name
+}
+
+json {
+    message "Hello ${name}!"
+}

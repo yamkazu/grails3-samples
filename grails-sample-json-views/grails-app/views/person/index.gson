@@ -1,0 +1,7 @@
+import grails.sample.json.views.Person
+
+model {
+    Collection<Person> personList
+}
+
+json tmpl.book(personList)
